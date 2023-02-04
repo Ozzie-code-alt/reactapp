@@ -1,0 +1,17 @@
+[type ="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled){
+    cursor: pointer;
+}
+
+.predict-controls{
+padding-top: 0px;
+padding-bottom: 0px;
+}
+
+.section{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.tensorflow-example{
+    margin: 10px;
+}
