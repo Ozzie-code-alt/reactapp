@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import update from 'immutability-helper';
-
-import './TensorflowExample.css';
+import './TensordlowExample.css';
 
 const TensorflowExample = () =>{
     //Value Pairs
@@ -31,29 +30,32 @@ const TensorflowExample = () =>{
                 [e.target.name]: {$set: parseInt(e.target.value)}
             }
         })
+
         setValuePairsState(
             updatedValuePairs
         )
+        
+    };
 
         const handleAddItem = () => {
             setValuePairsState([
                 ...valuePairsState,
-                {x:1,y:1}
+                {x:1, y:1}
             ]);
         };
         
 
-        const handleModelChange = e => setModelState({
+        const handleModelChange = (e) => setModelState({
             ...modelState,
             [e.target.name]: [parseInt(e.target.value)],
         });
         const handleTrainModel = () => {
 
         }
-        const predictPredict = () => {
+        const handlePredict = () => {
             
         }
-    }
+    
     return(
         <div className="tensorflow-example">  
         <div className='train-controls'>
@@ -63,7 +65,7 @@ const TensorflowExample = () =>{
                 <div className='field-label column'>Y</div>
             </div>
 
-            {valuePairsState.map((val,index) =>{
+            {valuePairsState.map((val, index) =>{
                 return (
                     <div key ={index} className="row">
                         <input
@@ -87,14 +89,15 @@ const TensorflowExample = () =>{
                     </div>
                 );
             })}
+
             <button className='button-add-example button--green'
             onClick={handleAddItem}>
                 +
                 </button>
 
-                <button className='button-add-example button--green'
+                <button className='button-train button--green'
             onClick={handleTrainModel}>
-                +
+                Train
                 </button>
         </div>
         </div>
