@@ -41,11 +41,42 @@ const TensorflowExample = () =>{
                 {x:1,y:1}
             ]);
         };
+        
 
+        const handleModelChange = e => setModelState({
+            ...modelState,
+            [e.target.name]: [parseInt(e.target.value)],
+        });
+        const handleTrainModel = () => {
 
+        }
+        const predictPredict = () => {
+            
+        }
     }
     return(
-        <div className="tensorflow-example">  </div>
+        <div className="tensorflow-example">  
+        <div className='train-controls'>
+            <h2 className='section'> Training Data (x,y) pairs </h2>
+            <div className='row labels'>
+                <div className='field-label column'>X</div>
+                <div className='field-label column'>Y</div>
+            </div>
+
+            {valuePairsState.map((val,index) =>{
+                return (
+                    <div key ={index} className="row">
+                        <input
+                        className='field field-x column'
+                        value={val.x}
+                            >
+                        </input>
+
+                    </div>
+                )
+            })}
+        </div>
+        </div>
     );
 };
 
