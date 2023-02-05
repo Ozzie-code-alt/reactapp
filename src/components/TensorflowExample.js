@@ -49,14 +49,14 @@ const TensorflowExample = () =>{
             ...modelState,
             [e.target.name]: [parseInt(e.target.value)],
         });
-        const handleTrainModel = () => {
 
+
+        const handleTrainModel = () => {
         }
-        const handlePredict = () => {
-            
+        const handlePredict = () => {          
         }
     
-    return(
+    return (
         <div className="tensorflow-example">  
         <div className='train-controls'>
             <h2 className='section'> Training Data (x,y) pairs </h2>
@@ -83,8 +83,7 @@ const TensorflowExample = () =>{
                         name = "y"
                         data-index = {index}
                         onChange ={handleValuePairChange}
-                        type ="number"  
-                         />
+                        type ="number" />
 
                     </div>
                 );
