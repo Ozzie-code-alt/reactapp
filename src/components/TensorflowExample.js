@@ -69,12 +69,33 @@ const TensorflowExample = () =>{
                         <input
                         className='field field-x column'
                         value={val.x}
-                            >
-                        </input>
+                        name = "x"
+                        data-index = {index}
+                        onChange ={handleValuePairChange}
+                        type ="number" pattern='[0-9]*'  />
+
+                        
+                        <input     
+                        className='field field-y column'
+                        value={val.y}
+                        name = "y"
+                        data-index = {index}
+                        onChange ={handleValuePairChange}
+                        type ="number"  
+                         />
 
                     </div>
-                )
+                );
             })}
+            <button className='button-add-example button--green'
+            onClick={handleAddItem}>
+                +
+                </button>
+
+                <button className='button-add-example button--green'
+            onClick={handleTrainModel}>
+                +
+                </button>
         </div>
         </div>
     );
